@@ -53,6 +53,11 @@ async def main_loop():
         await asyncio.sleep(randint(600, 1500))
 
 
-if __name__ == "__main__":
-    asyncio.run(main_loop())
+
+while True:
+    try:
+        asyncio.run(main_loop())
+    except Exception as e:
+        print(f"❌ Bot crashed: {e}")
+        sleep(3)
 
