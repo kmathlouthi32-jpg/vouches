@@ -82,11 +82,11 @@ def next_delay():
 
     # Long pause (people away)
     elif r < 0.25:
-        return random.randint(10*60 , 45*60 )
+        return random.randint(30, 360)  # 30s – 6min
 
     # Normal activity
     else:
-        return random.randint(30, 360)  # 30s – 6min
+        return random.randint(10*60 , 45*60 )
 
 def choose_message():
     if random.random() < 0.95:
@@ -132,6 +132,7 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
 
 
 
