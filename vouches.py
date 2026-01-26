@@ -122,8 +122,6 @@ async def activity_loop():
             await bot.send_message(CHANNEL_ID, msg,parse_mode='MarkdownV2')
         except Exception as e:
             print("Send error:", e)
-        await bot.send_message(7674917466, str(us_hour()))
-        await bot.send_message(7674917466, str(is_us_night())) 
         delay = next_delay()
         await asyncio.sleep(delay)
 
@@ -134,6 +132,7 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
 
 
 
