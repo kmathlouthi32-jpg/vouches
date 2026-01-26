@@ -72,7 +72,7 @@ def is_us_night():
 def next_delay():
     if is_us_night():
         # Very low activity at night
-        return random.randint(30 , 120)  # 30–120 min
+        return random.randint(30*60 , 120*60)  # 30–120 min
 
     r = random.random()
 
@@ -82,11 +82,11 @@ def next_delay():
 
     # Long pause (people away)
     elif r < 0.25:
-        return random.randint(10 , 45 )
+        return random.randint(10*60 , 45*60 )
 
     # Normal activity
     else:
-        return random.randint(3, 36)  # 30s – 6min
+        return random.randint(30, 360)  # 30s – 6min
 
 def choose_message():
     if random.random() < 0.95:
@@ -133,3 +133,4 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
