@@ -12,7 +12,7 @@ keep_alive()
 
 # ===== CONFIG =====
 BOT_TOKEN = "8276206384:AAGH6-LHRyqhZixP28Kum-VYRthyZqQgKJ4"
-CHANNEL_ID = "-1002609367196"  # or channel ID (-100xxxx)
+CHANNEL_ID = "-1003936987882"  # or channel ID (-100xxxx)
 
 US_TZ = pytz.timezone("US/Eastern")
 
